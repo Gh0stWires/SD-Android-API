@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "08efd001-30bf-47c4-9ba9-5e5db6acbe31",
+		"name": "SD-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2503514"
+	},
+	"item": [
+		{
+			"name": "Generate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\" : \"astronaut riding a unicorn\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/make",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"make"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/get-result",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"get-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/get-newest-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"get-newest-image"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}
