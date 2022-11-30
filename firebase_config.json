@@ -1,0 +1,10 @@
+{
+    "apiKey": "AIzaSyChp3h1kGR7gxrQpGkgFdwh4OhT7fUkgs8",
+    "authDomain": "celluloid-edbfa.firebaseapp.com",
+    "databaseURL": "https://celluloid-edbfa.firebaseio.com",
+    "projectId": "celluloid-edbfa",
+    "storageBucket": "celluloid-edbfa.appspot.com",
+    "messagingSenderId": "281901108118",
+    "appId": "1:281901108118:web:41d7279d6dc80c85b7ebb7",
+    "serviceAccount": "celluloid-edbfa-firebase-adminsdk-8x4tu-82aae8d57e.json"
+}

@@ -11,7 +11,7 @@ class DiffusionUtils():
         self.pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=tokens.HFTOKEN).to("cuda")
         self.pipe.safety_checker = dummy_checker
 
-    def make(self,prompt, num_of_images, db_commit_callback):
+    def make(self,prompt, num_of_images, user, token, db_commit_callback):
         files = []
         OUTDIR = 'generated/'
         PROMPT = prompt
@@ -39,7 +39,7 @@ class DiffusionUtils():
             uri = f'{OUTDIR}/{str(0)}_scale_{SCALE}_steps_{STEPS}_seed_{seeds[i]}.png'
             image.save(uri)
             files.append(uri)
-            db_commit_callback(uri, PROMPT)
+            db_commit_callback(uri, PROMPT, user, token)
             torch.cuda.empty_cache()
         return files
 

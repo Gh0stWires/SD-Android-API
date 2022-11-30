@@ -1,1 +1,1 @@
-HFTOKEN = "HF TOKEN HERE"
+HFTOKEN = "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"
